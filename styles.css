@@ -9,16 +9,23 @@ body {
 }
 
 .error {
-    position: absolute;
-    background-color: rgba(255, 166, 166, 0.412);
+    position: fixed;
+    background-color: rgba(255, 166, 166, 0.95);
     margin: 1vw;; padding: 0;
-    bottom: 10px;
+    bottom: 0px;
     padding: 1vw;
     text-align: center;
     width: 98%;
     border-radius: 15px;
-    color: black;
+    color: white;
+    z-index: 1;
     display: none;
+}
+.error h1 {
+    padding: 0; margin: 0;
+}
+.error p {
+    padding: 0; margin: 0;
 }
 
 .icon {

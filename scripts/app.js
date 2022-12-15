@@ -4,6 +4,8 @@ const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
 
+const error = document.querySelector('.error')
+
 const updateUI = (data) => {
   // destructure properties
   const { cityDets, weather } = data;
@@ -17,6 +19,8 @@ const updateUI = (data) => {
       <span>&deg;C</span>
     </div>
   `;
+
+  error.style.display = 'none';
 
   // update the night/day & icon images
   const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
@@ -50,5 +54,8 @@ cityForm.addEventListener('submit', e => {
   // update the ui with new city
   updateCity(city)
     .then(data => updateUI(data))
-    .catch(err => console.log(err));
+    .catch((err) => {
+        error.style.display = 'block';
+        console.log('error', err);
+    });
 });
