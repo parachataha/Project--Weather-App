@@ -1,0 +1,22 @@
+body {
+    background: #eeedec;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+}
+
+.container{
+    max-width: 400px;
+}
+
+.error {
+    position: absolute;
+    background-color: rgba(255, 166, 166, 0.412);
+    margin: 1vw;; padding: 0;
+    bottom: 10px;
+    padding: 1vw;
+    text-align: center;
+    width: 98%;
+    border-radius: 15px;
+    color: black;
+    display: none;
+}
